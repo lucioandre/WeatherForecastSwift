@@ -11,4 +11,14 @@ class PlaceSearchPresenter: PlaceSearchPresenterProtocol, PlaceSearchInteractorO
     var wireFrame: PlaceSearchWireframeProtocol?
     
     init() {}
+
+    func searchEvent(searchKey:String?) {
+        self.view?.showProgressIndicator()
+        if searchKey != nil && searchKey != "" {
+            self.interactor?.searchPlaces(searchKey: searchKey!, completion: { (places: [PlaceSearchItem]) in
+                self.view?.removeProgressIndicator()
+                self.view?.showPlaces(places: places)
+            })
+        }
+    }
 }
