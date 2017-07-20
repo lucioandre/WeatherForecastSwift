@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceSearchView" customModule="SwiftWeatherForecast" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="xtH-Fe-X4w" id="GYN-Ta-ReV"/>
+                <outlet property="tableView" destination="i9U-Mk-Zdn" id="BOu-RR-Puk"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zNY-iD-nxQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Search the City here" translatesAutoresizingMaskIntoConstraints="NO" id="xtH-Fe-X4w">
+                    <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="GmV-3K-18C"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i9U-Mk-Zdn">
+                    <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xtH-Fe-X4w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DCR-Gl-5BQ"/>
+                <constraint firstItem="i9U-Mk-Zdn" firstAttribute="top" secondItem="xtH-Fe-X4w" secondAttribute="bottom" id="IjY-t0-sML"/>
+                <constraint firstAttribute="trailing" secondItem="i9U-Mk-Zdn" secondAttribute="trailing" id="M6V-p3-AW9"/>
+                <constraint firstAttribute="bottom" secondItem="i9U-Mk-Zdn" secondAttribute="bottom" id="TMl-Zo-thV"/>
+                <constraint firstItem="xtH-Fe-X4w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="gpd-6x-pgw"/>
+                <constraint firstItem="i9U-Mk-Zdn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qmR-Ed-IYV"/>
+                <constraint firstAttribute="trailing" secondItem="xtH-Fe-X4w" secondAttribute="trailing" id="w9s-Tp-jee"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

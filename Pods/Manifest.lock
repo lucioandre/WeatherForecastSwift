@@ -1,3 +1,18 @@
-PODFILE CHECKSUM: 1a3fd6bdeb421d78a5c8a7a85af7ee3f04d09b8b
+PODS:
+  - Alamofire (4.5.0)
+  - NVActivityIndicatorView (3.6.1)
+  - Unbox (2.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - NVActivityIndicatorView
+  - Unbox
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
+
+PODFILE CHECKSUM: 66801f0380782f3879f9785d1eaccff2773e556c
 
 COCOAPODS: 1.2.1
