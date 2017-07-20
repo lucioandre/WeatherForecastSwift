@@ -7,6 +7,9 @@ import Foundation
 import UIKit
 
 class PlacesWireframe: PlacesWireframeProtocol {
+
+    var view:PlacesViewProtocol?
+
     class func presentPlacesModule(fromView view: UIViewController) {
         let placesView = PlacesWireframe.configureViewController()
         view.navigationController?.pushViewController(placesView, animated: true)
@@ -29,7 +32,14 @@ class PlacesWireframe: PlacesWireframeProtocol {
         interactor.presenter = presenter
         interactor.APIDataManager = APIDataManager
         interactor.localDatamanager = localDataManager
+        wireFrame.view = view
 
         return view as! UIViewController
+    }
+
+    //MARK: Redirection Methods
+
+    func navigateToPlaceSearch() {
+        PlaceSearchWireframe.presentPlaceSearchModule(fromView: self.view as! UIViewController)
     }
 }

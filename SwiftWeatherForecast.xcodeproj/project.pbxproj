@@ -20,7 +20,6 @@
 		33005FE41F1F903A0061F691 /* PlacesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FDA1F1F903A0061F691 /* PlacesProtocols.swift */; };
 		33005FE51F1F903A0061F691 /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FDC1F1F903A0061F691 /* PlacesView.swift */; };
 		33005FE61F1F903A0061F691 /* PlacesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FDE1F1F903A0061F691 /* PlacesWireframe.swift */; };
-		33005FF91F1F915C0061F691 /* PlaceSearchAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FEB1F1F915C0061F691 /* PlaceSearchAPIDataManager.swift */; };
 		33005FFA1F1F915C0061F691 /* PlaceSearchLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FED1F1F915C0061F691 /* PlaceSearchLocalDataManager.swift */; };
 		33005FFB1F1F915C0061F691 /* PlaceSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FEF1F1F915C0061F691 /* PlaceSearchInteractor.swift */; };
 		33005FFC1F1F915C0061F691 /* PlaceSearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FF01F1F915C0061F691 /* PlaceSearchItem.swift */; };
@@ -37,6 +36,14 @@
 		330060181F1F91680061F691 /* PlaceDetailedForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3300600F1F1F91680061F691 /* PlaceDetailedForecastView.swift */; };
 		330060191F1F91680061F691 /* PlaceDetailedForecastWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330060111F1F91680061F691 /* PlaceDetailedForecastWireframe.swift */; };
 		3300601B1F1F92750061F691 /* PlacesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3300601A1F1F92750061F691 /* PlacesView.xib */; };
+		3300601D1F1FB3F80061F691 /* PlaceSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3300601C1F1FB3F80061F691 /* PlaceSearchView.xib */; };
+		330060211F1FC4E50061F691 /* PlaceSearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330060201F1FC4E50061F691 /* PlaceSearchDataSource.swift */; };
+		330060241F1FCE350061F691 /* PlaceSearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330060231F1FCE350061F691 /* PlaceSearchResultTableViewCell.xib */; };
+		330060261F1FD0080061F691 /* PlaceSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330060251F1FD0080061F691 /* PlaceSearchResultTableViewCell.swift */; };
+		3300602E1F1FF9E60061F691 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3300602D1F1FF9E60061F691 /* APIClient.swift */; };
+		330060301F2002530061F691 /* APIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3300602F1F2002530061F691 /* APIClientProtocol.swift */; };
+		330060331F2021FE0061F691 /* PlaceSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330060321F2021FE0061F691 /* PlaceSearchResults.swift */; };
+		330060391F205E0E0061F691 /* PersistenceManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330060381F205E0E0061F691 /* PersistenceManagerProtocol.swift */; };
 		80880136AE48956C92B77123 /* Pods_SwiftWeatherForecast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE48F2E5DA6545A7F16837F /* Pods_SwiftWeatherForecast.framework */; };
 		CA37DBB4EF4A7FB50DDE5472 /* Pods_SwiftWeatherForecastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C5C6089CB3688E6BC35D27 /* Pods_SwiftWeatherForecastTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,10 +77,9 @@
 		33005FDA1F1F903A0061F691 /* PlacesProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesProtocols.swift; sourceTree = "<group>"; };
 		33005FDC1F1F903A0061F691 /* PlacesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
 		33005FDE1F1F903A0061F691 /* PlacesWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesWireframe.swift; sourceTree = "<group>"; };
-		33005FEB1F1F915C0061F691 /* PlaceSearchAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchAPIDataManager.swift; sourceTree = "<group>"; };
 		33005FED1F1F915C0061F691 /* PlaceSearchLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchLocalDataManager.swift; sourceTree = "<group>"; };
 		33005FEF1F1F915C0061F691 /* PlaceSearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchInteractor.swift; sourceTree = "<group>"; };
-		33005FF01F1F915C0061F691 /* PlaceSearchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchItem.swift; sourceTree = "<group>"; };
+		33005FF01F1F915C0061F691 /* PlaceSearchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceSearchItem.swift; path = Interactor/PlaceSearchItem.swift; sourceTree = "<group>"; };
 		33005FF21F1F915C0061F691 /* PlaceSearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchPresenter.swift; sourceTree = "<group>"; };
 		33005FF41F1F915C0061F691 /* PlaceSearchProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchProtocols.swift; sourceTree = "<group>"; };
 		33005FF61F1F915C0061F691 /* PlaceSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchView.swift; sourceTree = "<group>"; };
@@ -87,6 +93,14 @@
 		3300600F1F1F91680061F691 /* PlaceDetailedForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailedForecastView.swift; sourceTree = "<group>"; };
 		330060111F1F91680061F691 /* PlaceDetailedForecastWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailedForecastWireframe.swift; sourceTree = "<group>"; };
 		3300601A1F1F92750061F691 /* PlacesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacesView.xib; sourceTree = "<group>"; };
+		3300601C1F1FB3F80061F691 /* PlaceSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceSearchView.xib; sourceTree = "<group>"; };
+		330060201F1FC4E50061F691 /* PlaceSearchDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchDataSource.swift; sourceTree = "<group>"; };
+		330060231F1FCE350061F691 /* PlaceSearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceSearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		330060251F1FD0080061F691 /* PlaceSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		3300602D1F1FF9E60061F691 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = APIClient/APIClient.swift; sourceTree = "<group>"; };
+		3300602F1F2002530061F691 /* APIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClientProtocol.swift; path = APIClient/APIClientProtocol.swift; sourceTree = "<group>"; };
+		330060321F2021FE0061F691 /* PlaceSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceSearchResults.swift; path = APIClient/Models/PlaceSearchResults.swift; sourceTree = "<group>"; };
+		330060381F205E0E0061F691 /* PersistenceManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistenceManagerProtocol.swift; path = Persistence/PersistenceManagerProtocol.swift; sourceTree = "<group>"; };
 		36C5C6089CB3688E6BC35D27 /* Pods_SwiftWeatherForecastTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWeatherForecastTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D03385C63A4C1493DFA6014 /* Pods-SwiftWeatherForecast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWeatherForecast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWeatherForecast/Pods-SwiftWeatherForecast.debug.xcconfig"; sourceTree = "<group>"; };
 		5C5DAB200E06CA671D24E860 /* Pods-SwiftWeatherForecastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWeatherForecastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWeatherForecastTests/Pods-SwiftWeatherForecastTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +151,9 @@
 		33005FAA1F1F882B0061F691 /* SwiftWeatherForecast */ = {
 			isa = PBXGroup;
 			children = (
+				3300602C1F1FF9830061F691 /* API */,
 				33005FE71F1F91470061F691 /* Modules */,
+				330060351F205D8F0061F691 /* Persistence */,
 				33005FAB1F1F882B0061F691 /* AppDelegate.swift */,
 				33005FB51F1F882B0061F691 /* Assets.xcassets */,
 				33005FB71F1F882B0061F691 /* LaunchScreen.storyboard */,
@@ -223,6 +239,7 @@
 		33005FDB1F1F903A0061F691 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3300601E1F1FB8C90061F691 /* DataSource */,
 				33005FDC1F1F903A0061F691 /* PlacesView.swift */,
 				3300601A1F1F92750061F691 /* PlacesView.xib */,
 			);
@@ -250,6 +267,7 @@
 		33005FE81F1F915C0061F691 /* PlaceSearch */ = {
 			isa = PBXGroup;
 			children = (
+				330060341F2043D70061F691 /* Entities */,
 				33005FE91F1F915C0061F691 /* DataManager */,
 				33005FEE1F1F915C0061F691 /* Interactor */,
 				33005FF11F1F915C0061F691 /* Presenter */,
@@ -264,18 +282,9 @@
 		33005FE91F1F915C0061F691 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				33005FEA1F1F915C0061F691 /* API */,
 				33005FEC1F1F915C0061F691 /* Local */,
 			);
 			path = DataManager;
-			sourceTree = "<group>";
-		};
-		33005FEA1F1F915C0061F691 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				33005FEB1F1F915C0061F691 /* PlaceSearchAPIDataManager.swift */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		33005FEC1F1F915C0061F691 /* Local */ = {
@@ -290,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				33005FEF1F1F915C0061F691 /* PlaceSearchInteractor.swift */,
-				33005FF01F1F915C0061F691 /* PlaceSearchItem.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -314,7 +322,9 @@
 		33005FF51F1F915C0061F691 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3300601F1F1FC4980061F691 /* Data Source */,
 				33005FF61F1F915C0061F691 /* PlaceSearchView.swift */,
+				3300601C1F1FB3F80061F691 /* PlaceSearchView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +415,65 @@
 				330060111F1F91680061F691 /* PlaceDetailedForecastWireframe.swift */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		3300601E1F1FB8C90061F691 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		3300601F1F1FC4980061F691 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				330060221F1FCBED0061F691 /* Cells */,
+				330060201F1FC4E50061F691 /* PlaceSearchDataSource.swift */,
+			);
+			name = "Data Source";
+			sourceTree = "<group>";
+		};
+		330060221F1FCBED0061F691 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				330060231F1FCE350061F691 /* PlaceSearchResultTableViewCell.xib */,
+				330060251F1FD0080061F691 /* PlaceSearchResultTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		3300602C1F1FF9830061F691 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				330060311F2021A30061F691 /* Models */,
+				3300602D1F1FF9E60061F691 /* APIClient.swift */,
+				3300602F1F2002530061F691 /* APIClientProtocol.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		330060311F2021A30061F691 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				330060321F2021FE0061F691 /* PlaceSearchResults.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		330060341F2043D70061F691 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				33005FF01F1F915C0061F691 /* PlaceSearchItem.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		330060351F205D8F0061F691 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				330060381F205E0E0061F691 /* PersistenceManagerProtocol.swift */,
+			);
+			name = Persistence;
 			sourceTree = "<group>";
 		};
 		72411102646D5B2DEB8DC581 /* Pods */ = {
@@ -518,7 +587,9 @@
 			files = (
 				33005FB91F1F882B0061F691 /* LaunchScreen.storyboard in Resources */,
 				33005FB61F1F882B0061F691 /* Assets.xcassets in Resources */,
+				3300601D1F1FB3F80061F691 /* PlaceSearchView.xib in Resources */,
 				3300601B1F1F92750061F691 /* PlacesView.xib in Resources */,
+				330060241F1FCE350061F691 /* PlaceSearchResultTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,18 +700,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330060261F1FD0080061F691 /* PlaceSearchResultTableViewCell.swift in Sources */,
 				33005FE41F1F903A0061F691 /* PlacesProtocols.swift in Sources */,
 				330060181F1F91680061F691 /* PlaceDetailedForecastView.swift in Sources */,
+				330060391F205E0E0061F691 /* PersistenceManagerProtocol.swift in Sources */,
 				33005FE31F1F903A0061F691 /* PlacesPresenter.swift in Sources */,
 				33005FFF1F1F915C0061F691 /* PlaceSearchView.swift in Sources */,
+				3300602E1F1FF9E60061F691 /* APIClient.swift in Sources */,
 				33005FDF1F1F903A0061F691 /* PlacesAPIDataManager.swift in Sources */,
 				33005FB41F1F882B0061F691 /* SwiftWeatherForecast.xcdatamodeld in Sources */,
-				33005FF91F1F915C0061F691 /* PlaceSearchAPIDataManager.swift in Sources */,
+				330060331F2021FE0061F691 /* PlaceSearchResults.swift in Sources */,
 				33005FE21F1F903A0061F691 /* PlacesItem.swift in Sources */,
 				330060001F1F915C0061F691 /* PlaceSearchWireframe.swift in Sources */,
 				33005FFC1F1F915C0061F691 /* PlaceSearchItem.swift in Sources */,
 				33005FFD1F1F915C0061F691 /* PlaceSearchPresenter.swift in Sources */,
 				330060121F1F91680061F691 /* PlaceDetailedForecastAPIDataManager.swift in Sources */,
+				330060211F1FC4E50061F691 /* PlaceSearchDataSource.swift in Sources */,
 				330060171F1F91680061F691 /* PlaceDetailedForecastProtocols.swift in Sources */,
 				33005FE51F1F903A0061F691 /* PlacesView.swift in Sources */,
 				33005FFE1F1F915C0061F691 /* PlaceSearchProtocols.swift in Sources */,
@@ -651,6 +726,7 @@
 				330060131F1F91680061F691 /* PlaceDetailedForecastLocalDataManager.swift in Sources */,
 				33005FE01F1F903A0061F691 /* PlacesLocalDataManager.swift in Sources */,
 				33005FE11F1F903A0061F691 /* PlacesInteractor.swift in Sources */,
+				330060301F2002530061F691 /* APIClientProtocol.swift in Sources */,
 				330060141F1F91680061F691 /* PlaceDetailedForecastInteractor.swift in Sources */,
 				330060191F1F91680061F691 /* PlaceDetailedForecastWireframe.swift in Sources */,
 				33005FAC1F1F882B0061F691 /* AppDelegate.swift in Sources */,

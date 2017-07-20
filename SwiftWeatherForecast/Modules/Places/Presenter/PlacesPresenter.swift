@@ -9,6 +9,10 @@ class PlacesPresenter: PlacesPresenterProtocol, PlacesInteractorOutputProtocol {
     weak var view: PlacesViewProtocol?
     var interactor: PlacesInteractorInputProtocol?
     var wireFrame: PlacesWireframeProtocol?
+
+    func addPresenterEvent() {
+        self.wireFrame?.navigateToPlaceSearch()
+    }
     
     init() {}
 }
