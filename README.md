@@ -17,6 +17,14 @@ This project utilizes Cocoapods as dependency manager. The third-party libs used
 * NVActivityIndicatorView - To present activity indicators easily.
 * SDWebImage - Used to load images async and manage presentation in reusable cells.
 
+## Installation Steps
+To run this project, you may need run Cocoapods install before. In case of you don't have Cocoapods installed in your computer, you can find the steps to do it [here](https://cocoapods.org).
+Then, in a Terminal window navigate to project folder and execute the following command:
+
+`pod install`
+
+All dependencies should be installed.
+
 ## Roadmap for next iterations:
 * Allow user to persist his favorite locations (Using Core data async).
 * Show initial screen with a list of persisted locations, its current temperature and allow user interaction to remove locations.
