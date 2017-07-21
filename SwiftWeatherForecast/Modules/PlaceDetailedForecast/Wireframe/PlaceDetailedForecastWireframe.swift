@@ -18,7 +18,6 @@ class PlaceDetailedForecastWireframe: PlaceDetailedForecastWireframeProtocol {
         let presenter: PlaceDetailedForecastPresenterProtocol & PlaceDetailedForecastInteractorOutputProtocol = PlaceDetailedForecastPresenter(locationDescription: locationDescription)
         let interactor: PlaceDetailedForecastInteractorInputProtocol = PlaceDetailedForecastInteractor()
         let apiDataManager: PlaceDetailedForecastAPIClientProtocol = APIClient()
-        let localDataManager: PlaceDetailedForecastLocalDataManagerInputProtocol = PlaceDetailedForecastLocalDataManager()
         let wireFrame: PlaceDetailedForecastWireframeProtocol = PlaceDetailedForecastWireframe()
 
         // Connecting
@@ -28,7 +27,6 @@ class PlaceDetailedForecastWireframe: PlaceDetailedForecastWireframeProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         interactor.apiDataManager = apiDataManager
-        interactor.localDatamanager = localDataManager
 
         return view as! UIViewController
     }
