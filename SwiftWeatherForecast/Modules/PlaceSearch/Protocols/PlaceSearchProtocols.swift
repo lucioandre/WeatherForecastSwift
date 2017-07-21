@@ -8,13 +8,16 @@ import UIKit
 
 protocol PlaceSearchViewProtocol: class {
     var presenter: PlaceSearchPresenterProtocol? { get set }
-    func showPlaces(places:[PlaceSearchItem])
+    func showPlaces(places:[PlaceSearchItem]?)
+    func searchBarBecomeFirstResponder()
     func showProgressIndicator()
     func removeProgressIndicator()
 }
 
 protocol PlaceSearchWireframeProtocol: class {
+    var view: PlaceSearchViewProtocol? { get set }
     static func presentPlaceSearchModule(fromView view: UIViewController)
+    func presentDetailedForecastForLocation(locationDescription: String)
 }
 
 protocol PlaceSearchPresenterProtocol: class {
@@ -23,6 +26,8 @@ protocol PlaceSearchPresenterProtocol: class {
     var wireFrame: PlaceSearchWireframeProtocol? { get set }
 
     func searchEvent(searchKey:String?)
+    func didSelectPlaceEvent(row: Int)
+    func viewDidAppearEvent(isAfterPush:Bool)
 }
 
 protocol PlaceSearchInteractorOutputProtocol: class {

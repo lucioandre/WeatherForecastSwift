@@ -27,7 +27,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="WEATHER ">
                                         <attributes>
-                                            <color key="NSColor" red="0.70712997121828935" green="1" blue="0.98483866181689905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.57047568250539304" green="0.75762538945388502" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="36" name="HelveticaNeue-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>

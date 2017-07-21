@@ -7,41 +7,52 @@ import Foundation
 import UIKit
 import NVActivityIndicatorView
 
-class PlaceSearchView: UIViewController, PlaceSearchViewProtocol, NVActivityIndicatorViewable {
+class PlaceSearchView: UIViewController, PlaceSearchViewProtocol {
     var presenter: PlaceSearchPresenterProtocol?
-    var dataSource: PlaceSearchDataSource?
+    var dataSource: PlaceSearchTableViewDataSource?
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Search Places"
-        self.dataSource = PlaceSearchDataSource(tableView: self.tableView)
+        self.title = "Weather Forecast"
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        self.dataSource = PlaceSearchTableViewDataSource(tableView: self.tableView)
+        self.tableView.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.searchBar.becomeFirstResponder()
+        self.presenter?.viewDidAppearEvent(isAfterPush: self.isMovingToParentViewController)
     }
 
     //MARK - Protocol Methdos
 
-    func showPlaces(places: [PlaceSearchItem]) {
+    func searchBarBecomeFirstResponder() {
+        self.searchBar.becomeFirstResponder()
+    }
+
+    func showPlaces(places: [PlaceSearchItem]?) {
         self.dataSource?.places = places
     }
+}
 
-    func showProgressIndicator() {
-        self.startAnimating(type: .ballTrianglePath)
-    }
+//MARK: TableView Delegate
 
-    func removeProgressIndicator() {
-        self.stopAnimating()
+extension PlaceSearchView : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView === self.tableView {
+            self.presenter?.didSelectPlaceEvent(row: indexPath.row)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 
-//MARK - Search Bar Delegate
+//MARK: Search Bar Delegate
 
 extension PlaceSearchView : UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

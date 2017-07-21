@@ -5,6 +5,7 @@ target 'SwiftWeatherForecast' do
   pod 'Alamofire', '~> 4.4'
   pod 'Unbox'
   pod 'NVActivityIndicatorView'
+  pod 'SDWebImage', '~>3.8'
   use_frameworks!
 
   # Pods for SwiftWeatherForecast

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="236" id="rgY-4q-iKd" customClass="CurrentTemperatureTableViewCell" customModule="SwiftWeatherForecast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="236"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rgY-4q-iKd" id="HtI-YP-UaM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="235.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="satellite" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7d-jK-2Eh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="236"/>
+                    </mapView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="23º" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-K5-Sj1">
+                        <rect key="frame" x="8" y="90" width="584" height="115.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="96"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="BELO HORIZONTE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-Zm-zpP">
+                        <rect key="frame" x="8" y="30" width="584" height="43"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="35"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="998" text="Current weather status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-4p-ME2">
+                        <rect key="frame" x="8" y="73" width="584" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2C-Uq-dbb">
+                        <rect key="frame" x="568.5" y="197.5" width="23.5" height="30"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="V7d-jK-2Eh" firstAttribute="leading" secondItem="HtI-YP-UaM" secondAttribute="leading" id="5EA-dU-3YN"/>
+                    <constraint firstAttribute="trailing" secondItem="u0h-K5-Sj1" secondAttribute="trailing" constant="8" id="5Qa-Xb-Caf"/>
+                    <constraint firstItem="TmI-Zm-zpP" firstAttribute="leading" secondItem="HtI-YP-UaM" secondAttribute="leading" constant="8" id="6XX-lZ-WKy"/>
+                    <constraint firstAttribute="trailing" secondItem="kUu-4p-ME2" secondAttribute="trailing" constant="8" id="86l-fK-GDb"/>
+                    <constraint firstItem="u0h-K5-Sj1" firstAttribute="top" secondItem="kUu-4p-ME2" secondAttribute="bottom" id="AUF-zR-ggU"/>
+                    <constraint firstAttribute="trailing" secondItem="TmI-Zm-zpP" secondAttribute="trailing" constant="8" id="DqB-ix-MAF"/>
+                    <constraint firstAttribute="bottom" secondItem="u0h-K5-Sj1" secondAttribute="bottom" constant="30" id="DuY-2X-10t"/>
+                    <constraint firstItem="u0h-K5-Sj1" firstAttribute="leading" secondItem="HtI-YP-UaM" secondAttribute="leading" constant="8" id="LGx-qA-DXh"/>
+                    <constraint firstItem="kUu-4p-ME2" firstAttribute="leading" secondItem="HtI-YP-UaM" secondAttribute="leading" constant="8" id="VD7-Hf-kMI"/>
+                    <constraint firstItem="V7d-jK-2Eh" firstAttribute="top" secondItem="HtI-YP-UaM" secondAttribute="top" id="XWZ-8e-0Np"/>
+                    <constraint firstAttribute="bottom" secondItem="t2C-Uq-dbb" secondAttribute="bottom" constant="8" id="cLd-13-6I4"/>
+                    <constraint firstAttribute="bottom" secondItem="V7d-jK-2Eh" secondAttribute="bottom" id="co0-jk-jlX"/>
+                    <constraint firstItem="kUu-4p-ME2" firstAttribute="top" secondItem="TmI-Zm-zpP" secondAttribute="bottom" id="g3E-JP-GhL"/>
+                    <constraint firstAttribute="trailing" secondItem="V7d-jK-2Eh" secondAttribute="trailing" id="oRW-nm-OFl"/>
+                    <constraint firstItem="TmI-Zm-zpP" firstAttribute="top" secondItem="HtI-YP-UaM" secondAttribute="top" constant="30" id="s0B-Uq-w2q"/>
+                    <constraint firstAttribute="trailing" secondItem="t2C-Uq-dbb" secondAttribute="trailing" constant="8" id="yTh-HR-oqG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="cityLabel" destination="TmI-Zm-zpP" id="Rjh-lX-hMJ"/>
+                <outlet property="mapView" destination="V7d-jK-2Eh" id="KAR-2F-KrF"/>
+                <outlet property="temperatureLabel" destination="u0h-K5-Sj1" id="M1X-qu-mjx"/>
+                <outlet property="weatherDescription" destination="kUu-4p-ME2" id="NZp-0R-KEx"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="337"/>
+        </tableViewCell>
+    </objects>
+</document>

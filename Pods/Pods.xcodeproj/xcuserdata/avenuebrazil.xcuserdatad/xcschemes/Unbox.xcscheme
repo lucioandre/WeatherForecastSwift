@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A4386E6E8DFA3BD451550A35302A8D1D'
+               BlueprintIdentifier = '9DF3C86FBC75F4390EFFA83FEF3C00EA'
                BlueprintName = 'Unbox'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Unbox.framework'>

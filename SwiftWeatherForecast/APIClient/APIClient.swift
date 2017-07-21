@@ -19,7 +19,8 @@ class APIClient : NSObject, PlaceSearchAPIClientProtocol, PlaceDetailedForecastA
         let endPoint = "/premium/v1/search.ashx"
         let params = ["key" : apiKey,
                       "q" : searchKey,
-                      "format" : "json"]
+                      "format" : "json",
+                      "lang" : "en"]
 
         self.request(endPoint: endPoint, parameters: params, completion: { (response: [String : Any]?, error: Error?) in
             if error == nil {
@@ -41,8 +42,32 @@ class APIClient : NSObject, PlaceSearchAPIClientProtocol, PlaceDetailedForecastA
     }
 
     //MARK: Details Protocol
-    func fetchDetailedForecast(cityId: String, completion: ([String : Any]?, Error?) -> Void) {
+    func fetchDetailedForecastForLocation(locationDescription: String, completion: @escaping (PlaceDetailedForecastAPIResult?, Error?) -> Void) {
+        let endPoint = "/premium/v1/weather.ashx"
+        let params = ["key" : apiKey,
+                      "q" : locationDescription,
+                      "format" : "json",
+                      "num_of_days" : "10",
+                      "tp" : "24",
+                      "includeLocation" : "yes"]
 
+        self.request(endPoint: endPoint, parameters: params, completion: { (response: [String : Any]?, error: Error?) in
+            if error == nil {
+                guard let json = response else {
+                    completion(nil, nil)
+                    return
+                }
+                
+                do {
+                    let detailedForecast: PlaceDetailedForecastAPIResult = try unbox(dictionary: json)
+                    completion(detailedForecast, nil)
+                } catch {
+                    completion(nil, nil)
+                }
+            } else {
+                completion(nil, error)
+            }
+        })
     }
 
     //MARK: Private Method
