@@ -33,11 +33,6 @@ protocol PlaceDetailedForecastInteractorOutputProtocol: class {
 protocol PlaceDetailedForecastInteractorInputProtocol: class {
     var presenter: PlaceDetailedForecastInteractorOutputProtocol? { get set }
     var apiDataManager: PlaceDetailedForecastAPIClientProtocol? { get set }
-    var localDatamanager: PlaceDetailedForecastLocalDataManagerInputProtocol? { get set }
 
     func loadDetailedForecast(locationDescription: String, completion: @escaping (_ response: PlaceDetailedForecastItem?) -> Swift.Void)
-}
-
-protocol PlaceDetailedForecastLocalDataManagerInputProtocol: class {
-
 }

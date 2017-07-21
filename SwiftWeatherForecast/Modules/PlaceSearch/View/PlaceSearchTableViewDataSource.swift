@@ -32,6 +32,7 @@ class PlaceSearchTableViewDataSource: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let place = self.places {
+            //If object is instantiated but has no object then we return 1 to show No Results Cell
             return place.count > 0 ? place.count : 1
         }
         return 0

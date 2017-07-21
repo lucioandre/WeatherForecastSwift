@@ -8,7 +8,6 @@ import Foundation
 class PlaceDetailedForecastInteractor: PlaceDetailedForecastInteractorInputProtocol {
     weak var presenter: PlaceDetailedForecastInteractorOutputProtocol?
     var apiDataManager: PlaceDetailedForecastAPIClientProtocol?
-    var localDatamanager: PlaceDetailedForecastLocalDataManagerInputProtocol?
     
     init() {}
 
