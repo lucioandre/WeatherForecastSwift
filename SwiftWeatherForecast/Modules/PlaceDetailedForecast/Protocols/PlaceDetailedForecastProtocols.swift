@@ -8,50 +8,36 @@ import UIKit
 
 protocol PlaceDetailedForecastViewProtocol: class {
     var presenter: PlaceDetailedForecastPresenterProtocol? { get set }
-    /**
-    * Add here your methods for communication PRESENTER -> VIEW
-    */
+    func showProgressIndicator()
+    func removeProgressIndicator()
+    func presentWeatherForecast(detailedForecastItem: PlaceDetailedForecastItem)
 }
 
 protocol PlaceDetailedForecastWireframeProtocol: class {
-    static func presentPlaceDetailedForecastModule(fromView view: UIViewController)
-    /**
-    * Add here your methods for communication PRESENTER -> WIREFRAME
-    */
+    static func presentPlaceDetailedForecastModule(fromView view: UIViewController, _ locationDescription: String)
+
 }
 
 protocol PlaceDetailedForecastPresenterProtocol: class {
     var view: PlaceDetailedForecastViewProtocol? { get set }
     var interactor: PlaceDetailedForecastInteractorInputProtocol? { get set }
     var wireFrame: PlaceDetailedForecastWireframeProtocol? { get set }
-    /**
-    * Add here your methods for communication VIEW -> PRESENTER
-    */
+
+    func viewWillAppearEvent()
 }
 
 protocol PlaceDetailedForecastInteractorOutputProtocol: class {
-    /**
-    * Add here your methods for communication INTERACTOR -> PRESENTER
-    */
+
 }
 
 protocol PlaceDetailedForecastInteractorInputProtocol: class {
     var presenter: PlaceDetailedForecastInteractorOutputProtocol? { get set }
-    var APIDataManager: PlaceDetailedForecastAPIDataManagerInputProtocol? { get set }
+    var apiDataManager: PlaceDetailedForecastAPIClientProtocol? { get set }
     var localDatamanager: PlaceDetailedForecastLocalDataManagerInputProtocol? { get set }
-    /**
-    * Add here your methods for communication PRESENTER -> INTERACTOR
-    */
-}
 
-protocol PlaceDetailedForecastAPIDataManagerInputProtocol: class {
-    /**
-    * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
-    */
+    func loadDetailedForecast(locationDescription: String, completion: @escaping (_ response: PlaceDetailedForecastItem?) -> Swift.Void)
 }
 
 protocol PlaceDetailedForecastLocalDataManagerInputProtocol: class {
-    /**
-    * Add here your methods for communication INTERACTOR -> LOCALDATAMANAGER
-    */
+
 }

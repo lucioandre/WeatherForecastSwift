@@ -1,3 +1,23 @@
-PODFILE CHECKSUM: 1a3fd6bdeb421d78a5c8a7a85af7ee3f04d09b8b
+PODS:
+  - Alamofire (4.5.0)
+  - NVActivityIndicatorView (3.6.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - Unbox (2.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - NVActivityIndicatorView
+  - SDWebImage (~> 3.8)
+  - Unbox
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
+  Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
+
+PODFILE CHECKSUM: cf2341eefaba60f2bf4c38a989473e01374d1ea9
 
 COCOAPODS: 1.2.1
