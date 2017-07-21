@@ -31,7 +31,7 @@ class PlaceSearchPresenter: PlaceSearchPresenterProtocol, PlaceSearchInteractorO
     func didSelectPlaceEvent(row: Int) {
         if let p = self.places, row < p.count {
             let place = p[row]
-            self.wireFrame?.presentDetailedForecastAtCoordinates(latitude: place.latitude, longitude: place.longitude)
+            self.wireFrame?.presentDetailedForecastForLocation(locationDescription: place.fullName)
         }
     }
 }

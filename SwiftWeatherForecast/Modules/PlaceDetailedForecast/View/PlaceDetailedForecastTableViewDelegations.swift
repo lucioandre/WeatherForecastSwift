@@ -92,7 +92,7 @@ class PlaceDetailedForecastTableViewDelegations: NSObject, UITableViewDataSource
         let cell: CurrentTemperatureTableViewCell = self.tableView?.dequeueReusableCell(withIdentifier: DetailedForecastCellIdentifiers.currentWeather, for: indexPath) as! CurrentTemperatureTableViewCell
         if let location = detailedForecastItem?.place, let currentCondition = detailedForecastItem?.currentCondition {
             cell.temperatureLabel.text = currentCondition.temperatureF
-            cell.cityLabel.text = location.area
+            cell.cityLabel.text = location.city
             cell.weatherDescription.text = currentCondition.weatherDescription
 
             //Set map as background image

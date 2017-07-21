@@ -9,6 +9,7 @@
 import UIKit
 
 class PlaceSearchResultTableViewCell: UITableViewCell {
-    @IBOutlet weak var placeName: UILabel!
+    @IBOutlet weak var regionNameLabel: UILabel!
+    @IBOutlet weak var cityNameLabel: UILabel!
 
 }

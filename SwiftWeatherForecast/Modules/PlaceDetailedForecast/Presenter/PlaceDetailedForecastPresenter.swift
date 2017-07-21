@@ -9,11 +9,10 @@ class PlaceDetailedForecastPresenter: PlaceDetailedForecastPresenterProtocol, Pl
     weak var view: PlaceDetailedForecastViewProtocol?
     var interactor: PlaceDetailedForecastInteractorInputProtocol?
     var wireFrame: PlaceDetailedForecastWireframeProtocol?
-    var latitude: Float = 0, longitude:Float = 0
+    var locationDescription: String
 
-    init(latitude: Float, longitude: Float) {
-        self.latitude = latitude
-        self.longitude = longitude
+    init(locationDescription: String) {
+        self.locationDescription = locationDescription
     }
 
     func viewWillAppearEvent() {
@@ -23,7 +22,7 @@ class PlaceDetailedForecastPresenter: PlaceDetailedForecastPresenterProtocol, Pl
 
     func loadDetailedWeatherForecast() {
         self.view?.showProgressIndicator()
-        self.interactor?.loadDetailedForecast(latitude: self.latitude, longitude: self.longitude, completion: { (response: PlaceDetailedForecastItem?) in
+        self.interactor?.loadDetailedForecast(locationDescription: self.locationDescription, completion: { (response: PlaceDetailedForecastItem?) in
             self.view?.removeProgressIndicator()
             if let apiResponse = response {
                 self.view?.presentWeatherForecast(detailedForecastItem: apiResponse)

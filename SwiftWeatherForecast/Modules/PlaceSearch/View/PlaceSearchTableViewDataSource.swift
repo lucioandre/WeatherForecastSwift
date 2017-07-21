@@ -40,7 +40,9 @@ class PlaceSearchTableViewDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let p = self.places, p.count > 0 && indexPath.row < p.count {
             let cell: PlaceSearchResultTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: PlaceSearchResultTableViewCell.self), for: indexPath) as! PlaceSearchResultTableViewCell
-            cell.placeName.text = p[indexPath.row].formattedName
+            let place = p[indexPath.row]
+            cell.cityNameLabel.text = place.city
+            cell.regionNameLabel.text = place.region
             return cell
         } else {
             let cell:NoResultsTableViewCell = tableView.dequeueReusableCell(withIdentifier:String(describing:NoResultsTableViewCell.self), for: indexPath) as! NoResultsTableViewCell

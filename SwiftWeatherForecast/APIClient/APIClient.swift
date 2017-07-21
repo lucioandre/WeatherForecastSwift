@@ -42,15 +42,14 @@ class APIClient : NSObject, PlaceSearchAPIClientProtocol, PlaceDetailedForecastA
     }
 
     //MARK: Details Protocol
-    func fetchDetailedForecastForCoordinate(latitude: Float, longitude: Float, completion: @escaping (PlaceDetailedForecastAPIResult?, Error?) -> Void) {
+    func fetchDetailedForecastForLocation(locationDescription: String, completion: @escaping (PlaceDetailedForecastAPIResult?, Error?) -> Void) {
         let endPoint = "/premium/v1/weather.ashx"
         let params = ["key" : apiKey,
-                      "q" : "\(latitude),\(longitude)",
+                      "q" : locationDescription,
                       "format" : "json",
                       "num_of_days" : "10",
                       "tp" : "24",
-                      "includeLocation" : "yes",
-                      "lang" : "en"]
+                      "includeLocation" : "yes"]
 
         self.request(endPoint: endPoint, parameters: params, completion: { (response: [String : Any]?, error: Error?) in
             if error == nil {

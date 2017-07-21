@@ -6,19 +6,17 @@
 import Foundation
 
 struct PlaceSearchItem {
-    let area: String
-    let country: String
+    let city: String
     let latitude: Float
     let longitude: Float
     let region: String
-    let formattedName: String
+    let fullName: String
 
     init(place:Place) {
-        self.area = place.areaName
-        self.country = place.country
+        self.city = place.areaName
         self.latitude = place.latitude
         self.longitude = place.longitude
-        self.region = place.region
-        self.formattedName = [place.areaName, place.region, place.country].joined(separator: ", ")
+        self.region = [place.region, place.country].joined(separator: ", ")
+        self.fullName = [place.areaName, place.region, place.country].joined(separator: ", ")
     }
 }

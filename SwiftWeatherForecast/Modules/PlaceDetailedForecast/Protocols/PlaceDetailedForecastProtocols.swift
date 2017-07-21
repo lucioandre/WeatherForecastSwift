@@ -14,7 +14,7 @@ protocol PlaceDetailedForecastViewProtocol: class {
 }
 
 protocol PlaceDetailedForecastWireframeProtocol: class {
-    static func presentPlaceDetailedForecastModule(fromView view: UIViewController, _ latitude:Float, _ longitude:Float)
+    static func presentPlaceDetailedForecastModule(fromView view: UIViewController, _ locationDescription: String)
 
 }
 
@@ -35,7 +35,7 @@ protocol PlaceDetailedForecastInteractorInputProtocol: class {
     var apiDataManager: PlaceDetailedForecastAPIClientProtocol? { get set }
     var localDatamanager: PlaceDetailedForecastLocalDataManagerInputProtocol? { get set }
 
-    func loadDetailedForecast(latitude: Float, longitude: Float, completion: @escaping (_ response: PlaceDetailedForecastItem?) -> Swift.Void)
+    func loadDetailedForecast(locationDescription: String, completion: @escaping (_ response: PlaceDetailedForecastItem?) -> Swift.Void)
 }
 
 protocol PlaceDetailedForecastLocalDataManagerInputProtocol: class {

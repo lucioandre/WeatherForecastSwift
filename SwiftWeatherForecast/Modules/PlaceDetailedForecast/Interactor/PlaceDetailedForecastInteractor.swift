@@ -12,8 +12,8 @@ class PlaceDetailedForecastInteractor: PlaceDetailedForecastInteractorInputProto
     
     init() {}
 
-    func loadDetailedForecast(latitude: Float, longitude: Float, completion: @escaping (_ response: PlaceDetailedForecastItem?) -> Swift.Void) {
-        apiDataManager?.fetchDetailedForecastForCoordinate(latitude: latitude, longitude: longitude, completion: { (response: PlaceDetailedForecastAPIResult?, error:Error?) in
+    func loadDetailedForecast(locationDescription: String, completion: @escaping (_ response: PlaceDetailedForecastItem?) -> Swift.Void) {
+        apiDataManager?.fetchDetailedForecastForLocation(locationDescription: locationDescription, completion: { (response: PlaceDetailedForecastAPIResult?, error:Error?) in
             if let apiResponse = response {
                 let detailedForecastItem = PlaceDetailedForecastItem(detailedForecastAPI: apiResponse)
                 completion(detailedForecastItem)

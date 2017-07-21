@@ -38,7 +38,7 @@ class PlaceSearchWireframe: PlaceSearchWireframeProtocol {
 
     //MARK: Navigation Methods
 
-    func presentDetailedForecastAtCoordinates(latitude:Float, longitude:Float) {
-        PlaceDetailedForecastWireframe.presentPlaceDetailedForecastModule(fromView: self.view as! UIViewController, latitude, longitude)
+    func presentDetailedForecastForLocation(locationDescription: String) {
+        PlaceDetailedForecastWireframe.presentPlaceDetailedForecastModule(fromView: self.view as! UIViewController, locationDescription)
     }
 }

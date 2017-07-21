@@ -16,7 +16,7 @@ protocol PlaceSearchViewProtocol: class {
 protocol PlaceSearchWireframeProtocol: class {
     var view: PlaceSearchViewProtocol? { get set }
     static func presentPlaceSearchModule(fromView view: UIViewController)
-    func presentDetailedForecastAtCoordinates(latitude:Float, longitude:Float)
+    func presentDetailedForecastForLocation(locationDescription: String)
 }
 
 protocol PlaceSearchPresenterProtocol: class {
