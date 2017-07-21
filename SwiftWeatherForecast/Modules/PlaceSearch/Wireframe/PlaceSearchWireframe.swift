@@ -20,7 +20,6 @@ class PlaceSearchWireframe: PlaceSearchWireframeProtocol {
         let presenter: PlaceSearchPresenterProtocol & PlaceSearchInteractorOutputProtocol = PlaceSearchPresenter()
         let interactor: PlaceSearchInteractorInputProtocol = PlaceSearchInteractor()
         let APIDataManager: PlaceSearchAPIClientProtocol = APIClient()
-        let localDataManager: PlaceSearchLocalDataManagerInputProtocol = PlaceSearchLocalDataManager()
         let wireFrame: PlaceSearchWireframeProtocol = PlaceSearchWireframe()
 
         // Connecting
@@ -30,7 +29,6 @@ class PlaceSearchWireframe: PlaceSearchWireframeProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         interactor.apiDataManager = APIDataManager
-        interactor.localDatamanager = localDataManager
         wireFrame.view = view
 
         return view as! UIViewController

@@ -11,14 +11,12 @@
 		33005FB61F1F882B0061F691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33005FB51F1F882B0061F691 /* Assets.xcassets */; };
 		33005FB91F1F882B0061F691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33005FB71F1F882B0061F691 /* LaunchScreen.storyboard */; };
 		33005FC41F1F882B0061F691 /* SwiftWeatherForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FC31F1F882B0061F691 /* SwiftWeatherForecastTests.swift */; };
-		33005FFA1F1F915C0061F691 /* PlaceSearchLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FED1F1F915C0061F691 /* PlaceSearchLocalDataManager.swift */; };
 		33005FFB1F1F915C0061F691 /* PlaceSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FEF1F1F915C0061F691 /* PlaceSearchInteractor.swift */; };
 		33005FFC1F1F915C0061F691 /* PlaceSearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FF01F1F915C0061F691 /* PlaceSearchItem.swift */; };
 		33005FFD1F1F915C0061F691 /* PlaceSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FF21F1F915C0061F691 /* PlaceSearchPresenter.swift */; };
 		33005FFE1F1F915C0061F691 /* PlaceSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FF41F1F915C0061F691 /* PlaceSearchProtocols.swift */; };
 		33005FFF1F1F915C0061F691 /* PlaceSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FF61F1F915C0061F691 /* PlaceSearchView.swift */; };
 		330060001F1F915C0061F691 /* PlaceSearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33005FF81F1F915C0061F691 /* PlaceSearchWireframe.swift */; };
-		330060131F1F91680061F691 /* PlaceDetailedForecastLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330060061F1F91680061F691 /* PlaceDetailedForecastLocalDataManager.swift */; };
 		330060141F1F91680061F691 /* PlaceDetailedForecastInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330060081F1F91680061F691 /* PlaceDetailedForecastInteractor.swift */; };
 		330060151F1F91680061F691 /* PlaceDetailedForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330060091F1F91680061F691 /* PlaceDetailedForecastItem.swift */; };
 		330060161F1F91680061F691 /* PlaceDetailedForecastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3300600B1F1F91680061F691 /* PlaceDetailedForecastPresenter.swift */; };
@@ -69,14 +67,12 @@
 		33005FBF1F1F882B0061F691 /* SwiftWeatherForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftWeatherForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33005FC31F1F882B0061F691 /* SwiftWeatherForecastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWeatherForecastTests.swift; sourceTree = "<group>"; };
 		33005FC51F1F882B0061F691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33005FED1F1F915C0061F691 /* PlaceSearchLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchLocalDataManager.swift; sourceTree = "<group>"; };
 		33005FEF1F1F915C0061F691 /* PlaceSearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchInteractor.swift; sourceTree = "<group>"; };
 		33005FF01F1F915C0061F691 /* PlaceSearchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceSearchItem.swift; path = Interactor/PlaceSearchItem.swift; sourceTree = "<group>"; };
 		33005FF21F1F915C0061F691 /* PlaceSearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchPresenter.swift; sourceTree = "<group>"; };
 		33005FF41F1F915C0061F691 /* PlaceSearchProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchProtocols.swift; sourceTree = "<group>"; };
 		33005FF61F1F915C0061F691 /* PlaceSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchView.swift; sourceTree = "<group>"; };
 		33005FF81F1F915C0061F691 /* PlaceSearchWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchWireframe.swift; sourceTree = "<group>"; };
-		330060061F1F91680061F691 /* PlaceDetailedForecastLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailedForecastLocalDataManager.swift; sourceTree = "<group>"; };
 		330060081F1F91680061F691 /* PlaceDetailedForecastInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailedForecastInteractor.swift; sourceTree = "<group>"; };
 		330060091F1F91680061F691 /* PlaceDetailedForecastItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDetailedForecastItem.swift; path = Interactor/PlaceDetailedForecastItem.swift; sourceTree = "<group>"; };
 		3300600B1F1F91680061F691 /* PlaceDetailedForecastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailedForecastPresenter.swift; sourceTree = "<group>"; };
@@ -188,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				330060341F2043D70061F691 /* Entities */,
-				33005FE91F1F915C0061F691 /* DataManager */,
 				33005FEE1F1F915C0061F691 /* Interactor */,
 				33005FF11F1F915C0061F691 /* Presenter */,
 				33005FF31F1F915C0061F691 /* Protocols */,
@@ -197,22 +192,6 @@
 			);
 			name = PlaceSearch;
 			path = Modules/PlaceSearch;
-			sourceTree = "<group>";
-		};
-		33005FE91F1F915C0061F691 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				33005FEC1F1F915C0061F691 /* Local */,
-			);
-			path = DataManager;
-			sourceTree = "<group>";
-		};
-		33005FEC1F1F915C0061F691 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				33005FED1F1F915C0061F691 /* PlaceSearchLocalDataManager.swift */,
-			);
-			path = Local;
 			sourceTree = "<group>";
 		};
 		33005FEE1F1F915C0061F691 /* Interactor */ = {
@@ -261,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				3300603F1F2116CB0061F691 /* Entities */,
-				330060021F1F91680061F691 /* DataManager */,
 				330060071F1F91680061F691 /* Interactor */,
 				3300600A1F1F91680061F691 /* Presenter */,
 				3300600C1F1F91680061F691 /* Protocols */,
@@ -270,22 +248,6 @@
 			);
 			name = PlaceDetailedForecast;
 			path = Modules/PlaceDetailedForecast;
-			sourceTree = "<group>";
-		};
-		330060021F1F91680061F691 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				330060051F1F91680061F691 /* Local */,
-			);
-			path = DataManager;
-			sourceTree = "<group>";
-		};
-		330060051F1F91680061F691 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				330060061F1F91680061F691 /* PlaceDetailedForecastLocalDataManager.swift */,
-			);
-			path = Local;
 			sourceTree = "<group>";
 		};
 		330060071F1F91680061F691 /* Interactor */ = {
@@ -662,8 +624,6 @@
 				33005FFB1F1F915C0061F691 /* PlaceSearchInteractor.swift in Sources */,
 				330060161F1F91680061F691 /* PlaceDetailedForecastPresenter.swift in Sources */,
 				330060151F1F91680061F691 /* PlaceDetailedForecastItem.swift in Sources */,
-				33005FFA1F1F915C0061F691 /* PlaceSearchLocalDataManager.swift in Sources */,
-				330060131F1F91680061F691 /* PlaceDetailedForecastLocalDataManager.swift in Sources */,
 				330060411F21232D0061F691 /* PlaceDetailedForecastResult.swift in Sources */,
 				330060301F2002530061F691 /* APIClientProtocol.swift in Sources */,
 				330060141F1F91680061F691 /* PlaceDetailedForecastInteractor.swift in Sources */,
