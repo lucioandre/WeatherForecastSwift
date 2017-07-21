@@ -37,11 +37,6 @@ protocol PlaceSearchInteractorOutputProtocol: class {
 protocol PlaceSearchInteractorInputProtocol: class {
     var presenter: PlaceSearchInteractorOutputProtocol? { get set }
     var apiDataManager: PlaceSearchAPIClientProtocol? { get set }
-    var localDatamanager: PlaceSearchLocalDataManagerInputProtocol? { get set }
 
     func searchPlaces(searchKey:String, completion: @escaping (_ response: [PlaceSearchItem]) -> Swift.Void)
-}
-
-protocol PlaceSearchLocalDataManagerInputProtocol: class {
-
 }

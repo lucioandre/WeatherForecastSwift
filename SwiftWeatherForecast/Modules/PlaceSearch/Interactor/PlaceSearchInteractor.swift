@@ -8,7 +8,6 @@ import Foundation
 class PlaceSearchInteractor: PlaceSearchInteractorInputProtocol {
     weak var presenter: PlaceSearchInteractorOutputProtocol?
     var apiDataManager: PlaceSearchAPIClientProtocol?
-    var localDatamanager: PlaceSearchLocalDataManagerInputProtocol?
 
     init() {}
 
