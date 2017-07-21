@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
-class PlaceSearchDataSource: NSObject, UITableViewDataSource {
+class PlaceSearchTableViewDataSource: NSObject, UITableViewDataSource {
 
     var tableView:UITableView?
     var places:[PlaceSearchItem]? {
         didSet {
-            self.tableView?.reloadData()
+            if let p = places, p.count > 0 {
+                self.tableView?.reloadData()
+            }
         }
     }
 

@@ -14,5 +14,5 @@ protocol PlaceSearchAPIClientProtocol: class {
 }
 
 protocol PlaceDetailedForecastAPIClientProtocol: class {
-    func fetchDetailedForecast(cityId:String, completion:(_ response: [String : Any]?, _ error: Error?) -> Swift.Void)
+    func fetchDetailedForecastForCoordinate(latitude: Float, longitude: Float, completion: @escaping (PlaceDetailedForecastAPIResult?, Error?) -> Void)
 }

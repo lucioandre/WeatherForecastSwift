@@ -14,7 +14,9 @@ protocol PlaceSearchViewProtocol: class {
 }
 
 protocol PlaceSearchWireframeProtocol: class {
+    var view: PlaceSearchViewProtocol? { get set }
     static func presentPlaceSearchModule(fromView view: UIViewController)
+    func presentDetailedForecastAtCoordinates(latitude:Float, longitude:Float)
 }
 
 protocol PlaceSearchPresenterProtocol: class {
@@ -23,6 +25,7 @@ protocol PlaceSearchPresenterProtocol: class {
     var wireFrame: PlaceSearchWireframeProtocol? { get set }
 
     func searchEvent(searchKey:String?)
+    func didSelectPlaceEvent(row: Int)
 }
 
 protocol PlaceSearchInteractorOutputProtocol: class {

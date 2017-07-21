@@ -19,7 +19,6 @@ struct PlaceSearchItem {
         self.latitude = place.latitude
         self.longitude = place.longitude
         self.region = place.region
-        self.formattedName = place.areaName + ", " + place.region + ", " + place.country
-        print([place.areaName, place.country].joined(separator: ", "))
+        self.formattedName = [place.areaName, place.region, place.country].joined(separator: ", ")
     }
 }

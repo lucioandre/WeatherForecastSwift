@@ -8,11 +8,13 @@ import UIKit
 
 protocol PlaceDetailedForecastViewProtocol: class {
     var presenter: PlaceDetailedForecastPresenterProtocol? { get set }
-    
+    func showProgressIndicator()
+    func removeProgressIndicator()
+    func presentWeatherForecast(detailedForecastItem: PlaceDetailedForecastItem)
 }
 
 protocol PlaceDetailedForecastWireframeProtocol: class {
-    static func presentPlaceDetailedForecastModule(fromView view: UIViewController)
+    static func presentPlaceDetailedForecastModule(fromView view: UIViewController, _ latitude:Float, _ longitude:Float)
 
 }
 
@@ -21,6 +23,7 @@ protocol PlaceDetailedForecastPresenterProtocol: class {
     var interactor: PlaceDetailedForecastInteractorInputProtocol? { get set }
     var wireFrame: PlaceDetailedForecastWireframeProtocol? { get set }
 
+    func viewWillAppearEvent()
 }
 
 protocol PlaceDetailedForecastInteractorOutputProtocol: class {
@@ -29,13 +32,10 @@ protocol PlaceDetailedForecastInteractorOutputProtocol: class {
 
 protocol PlaceDetailedForecastInteractorInputProtocol: class {
     var presenter: PlaceDetailedForecastInteractorOutputProtocol? { get set }
-    var APIDataManager: PlaceDetailedForecastAPIDataManagerInputProtocol? { get set }
+    var apiDataManager: PlaceDetailedForecastAPIClientProtocol? { get set }
     var localDatamanager: PlaceDetailedForecastLocalDataManagerInputProtocol? { get set }
 
-}
-
-protocol PlaceDetailedForecastAPIDataManagerInputProtocol: class {
-
+    func loadDetailedForecast(latitude: Float, longitude: Float, completion: @escaping (_ response: PlaceDetailedForecastItem?) -> Swift.Void)
 }
 
 protocol PlaceDetailedForecastLocalDataManagerInputProtocol: class {

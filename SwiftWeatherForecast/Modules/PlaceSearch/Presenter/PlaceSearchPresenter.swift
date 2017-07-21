@@ -9,6 +9,7 @@ class PlaceSearchPresenter: PlaceSearchPresenterProtocol, PlaceSearchInteractorO
     weak var view: PlaceSearchViewProtocol?
     var interactor: PlaceSearchInteractorInputProtocol?
     var wireFrame: PlaceSearchWireframeProtocol?
+    var places: [PlaceSearchItem]?
     
     init() {}
 
@@ -16,9 +17,16 @@ class PlaceSearchPresenter: PlaceSearchPresenterProtocol, PlaceSearchInteractorO
         self.view?.showProgressIndicator()
         if searchKey != nil && searchKey != "" {
             self.interactor?.searchPlaces(searchKey: searchKey!, completion: { (places: [PlaceSearchItem]) in
+                self.places = places
                 self.view?.removeProgressIndicator()
                 self.view?.showPlaces(places: places)
             })
+        }
+    }
+
+    func didSelectPlaceEvent(row: Int) {
+        if let place = self.places?[row] {
+            self.wireFrame?.presentDetailedForecastAtCoordinates(latitude: place.latitude, longitude: place.longitude)
         }
     }
 }

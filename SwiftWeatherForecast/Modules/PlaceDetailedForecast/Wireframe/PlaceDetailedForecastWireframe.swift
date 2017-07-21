@@ -7,17 +7,17 @@ import Foundation
 import UIKit
 
 class PlaceDetailedForecastWireframe: PlaceDetailedForecastWireframeProtocol {
-    class func presentPlaceDetailedForecastModule(fromView view: UIViewController) {
-        let placeDetailedForecastView = PlaceDetailedForecastWireframe.configureViewController()
+    class func presentPlaceDetailedForecastModule(fromView view: UIViewController, _ latitude:Float, _ longitude:Float) {
+        let placeDetailedForecastView = PlaceDetailedForecastWireframe.configureViewController(latitude: latitude, longitude: longitude)
         view.navigationController?.pushViewController(placeDetailedForecastView, animated: true)
     }
 
-    class func configureViewController() -> UIViewController {
+    private class func configureViewController(latitude: Float, longitude: Float) -> UIViewController {
         // Generating module components
         let view: PlaceDetailedForecastViewProtocol = PlaceDetailedForecastView()
-        let presenter: PlaceDetailedForecastPresenterProtocol & PlaceDetailedForecastInteractorOutputProtocol = PlaceDetailedForecastPresenter()
+        let presenter: PlaceDetailedForecastPresenterProtocol & PlaceDetailedForecastInteractorOutputProtocol = PlaceDetailedForecastPresenter(latitude: latitude, longitude: longitude)
         let interactor: PlaceDetailedForecastInteractorInputProtocol = PlaceDetailedForecastInteractor()
-        let APIDataManager: PlaceDetailedForecastAPIDataManagerInputProtocol = PlaceDetailedForecastAPIDataManager()
+        let apiDataManager: PlaceDetailedForecastAPIClientProtocol = APIClient()
         let localDataManager: PlaceDetailedForecastLocalDataManagerInputProtocol = PlaceDetailedForecastLocalDataManager()
         let wireFrame: PlaceDetailedForecastWireframeProtocol = PlaceDetailedForecastWireframe()
 
@@ -27,7 +27,7 @@ class PlaceDetailedForecastWireframe: PlaceDetailedForecastWireframeProtocol {
         presenter.wireFrame = wireFrame
         presenter.interactor = interactor
         interactor.presenter = presenter
-        interactor.APIDataManager = APIDataManager
+        interactor.apiDataManager = apiDataManager
         interactor.localDatamanager = localDataManager
 
         return view as! UIViewController
