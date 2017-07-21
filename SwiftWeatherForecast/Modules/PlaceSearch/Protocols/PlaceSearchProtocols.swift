@@ -8,7 +8,7 @@ import UIKit
 
 protocol PlaceSearchViewProtocol: class {
     var presenter: PlaceSearchPresenterProtocol? { get set }
-    func showPlaces(places:[PlaceSearchItem])
+    func showPlaces(places:[PlaceSearchItem]?)
     func showProgressIndicator()
     func removeProgressIndicator()
 }

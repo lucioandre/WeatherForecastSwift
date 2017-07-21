@@ -31,7 +31,7 @@ class PlaceSearchView: UIViewController, PlaceSearchViewProtocol {
 
     //MARK - Protocol Methdos
 
-    func showPlaces(places: [PlaceSearchItem]) {
+    func showPlaces(places: [PlaceSearchItem]?) {
         self.dataSource?.places = places
     }
 }

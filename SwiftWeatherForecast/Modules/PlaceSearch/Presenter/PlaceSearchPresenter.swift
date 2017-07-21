@@ -14,6 +14,10 @@ class PlaceSearchPresenter: PlaceSearchPresenterProtocol, PlaceSearchInteractorO
     init() {}
 
     func searchEvent(searchKey:String?) {
+        //Reset list whenever user taps to search something
+        self.places = nil
+        self.view?.showPlaces(places: places)
+
         self.view?.showProgressIndicator()
         if searchKey != nil && searchKey != "" {
             self.interactor?.searchPlaces(searchKey: searchKey!, completion: { (places: [PlaceSearchItem]) in
@@ -25,7 +29,8 @@ class PlaceSearchPresenter: PlaceSearchPresenterProtocol, PlaceSearchInteractorO
     }
 
     func didSelectPlaceEvent(row: Int) {
-        if let place = self.places?[row] {
+        if let p = self.places, row < p.count {
+            let place = p[row]
             self.wireFrame?.presentDetailedForecastAtCoordinates(latitude: place.latitude, longitude: place.longitude)
         }
     }

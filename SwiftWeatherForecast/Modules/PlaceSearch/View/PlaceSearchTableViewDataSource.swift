@@ -14,9 +14,7 @@ class PlaceSearchTableViewDataSource: NSObject, UITableViewDataSource {
     var tableView:UITableView?
     var places:[PlaceSearchItem]? {
         didSet {
-            if let p = places, p.count > 0 {
-                self.tableView?.reloadData()
-            }
+            self.tableView?.reloadData()
         }
     }
 
@@ -29,6 +27,7 @@ class PlaceSearchTableViewDataSource: NSObject, UITableViewDataSource {
 
         let nibName = String(describing: PlaceSearchResultTableViewCell.self)
         self.tableView?.register(UINib(nibName: nibName, bundle: nil), forCellReuseIdentifier: nibName)
+        self.tableView?.register(NoResultsTableViewCell.self, forCellReuseIdentifier: String(describing:NoResultsTableViewCell.self))
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,12 +38,16 @@ class PlaceSearchTableViewDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: PlaceSearchResultTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: PlaceSearchResultTableViewCell.self), for: indexPath) as! PlaceSearchResultTableViewCell
-        if let place = self.places?[indexPath.row] {
-            cell.placeName.text = place.formattedName
+        if let p = self.places, p.count > 0 && indexPath.row < p.count {
+            let cell: PlaceSearchResultTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: PlaceSearchResultTableViewCell.self), for: indexPath) as! PlaceSearchResultTableViewCell
+            cell.placeName.text = p[indexPath.row].formattedName
+            return cell
+        } else {
+            let cell:NoResultsTableViewCell = tableView.dequeueReusableCell(withIdentifier:String(describing:NoResultsTableViewCell.self), for: indexPath) as! NoResultsTableViewCell
+            cell.textLabel?.text = "Your search returned no results"
+            cell.textLabel?.textAlignment = NSTextAlignment.center
+            return cell
         }
-
-        return cell
     }
     
 }
