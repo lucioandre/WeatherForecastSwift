@@ -13,6 +13,12 @@ class PlaceSearchPresenter: PlaceSearchPresenterProtocol, PlaceSearchInteractorO
     
     init() {}
 
+    func viewDidAppearEvent(isAfterPush:Bool) {
+        if isAfterPush {
+            self.view?.searchBarBecomeFirstResponder()
+        }
+    }
+
     func searchEvent(searchKey:String?) {
         //Reset list whenever user taps to search something
         self.places = nil

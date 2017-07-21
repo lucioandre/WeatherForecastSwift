@@ -26,10 +26,14 @@ class PlaceSearchView: UIViewController, PlaceSearchViewProtocol {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.searchBar.becomeFirstResponder()
+        self.presenter?.viewDidAppearEvent(isAfterPush: self.isMovingToParentViewController)
     }
 
     //MARK - Protocol Methdos
+
+    func searchBarBecomeFirstResponder() {
+        self.searchBar.becomeFirstResponder()
+    }
 
     func showPlaces(places: [PlaceSearchItem]?) {
         self.dataSource?.places = places
@@ -43,6 +47,7 @@ extension PlaceSearchView : UITableViewDelegate {
         if tableView === self.tableView {
             self.presenter?.didSelectPlaceEvent(row: indexPath.row)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

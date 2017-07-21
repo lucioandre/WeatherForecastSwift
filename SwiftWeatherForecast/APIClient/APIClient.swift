@@ -57,7 +57,7 @@ class APIClient : NSObject, PlaceSearchAPIClientProtocol, PlaceDetailedForecastA
                     completion(nil, nil)
                     return
                 }
-                debugPrint(response)
+                
                 do {
                     let detailedForecast: PlaceDetailedForecastAPIResult = try unbox(dictionary: json)
                     completion(detailedForecast, nil)

@@ -9,6 +9,7 @@ import UIKit
 protocol PlaceSearchViewProtocol: class {
     var presenter: PlaceSearchPresenterProtocol? { get set }
     func showPlaces(places:[PlaceSearchItem]?)
+    func searchBarBecomeFirstResponder()
     func showProgressIndicator()
     func removeProgressIndicator()
 }
@@ -26,6 +27,7 @@ protocol PlaceSearchPresenterProtocol: class {
 
     func searchEvent(searchKey:String?)
     func didSelectPlaceEvent(row: Int)
+    func viewDidAppearEvent(isAfterPush:Bool)
 }
 
 protocol PlaceSearchInteractorOutputProtocol: class {
